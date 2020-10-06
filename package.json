@@ -41,9 +41,6 @@
     "dist"
   ],
   "typings": "dist/index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "lodash": "^4.17.20",
