@@ -1,5 +1,5 @@
 {
-  "name": "@hamidrezakks/kk-modality",
+  "name": "kk-modality",
   "version": "1.0.0",
   "description": "A responsive confirm modal based on Material Design",
   "main": "dist/index.cjs.js",
