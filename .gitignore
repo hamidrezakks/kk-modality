@@ -13,7 +13,6 @@ yarn-debug.log*
 yarn-error.log*
 
 #rollup
-/dist
 .env
 .env.local
 .env.development.local
