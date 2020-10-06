@@ -17,7 +17,7 @@
 
 > This is the final project of my "Build a React Component Library and Publish to the GitHub Package Registry" article on medium. [Check it out!](https://medium.com/better-programming/build-your-very-own-react-component-library-and-publish-it-to-github-package-registry-192a688a51fd)
 
-### 🏠 [Homepage](https://github.com/thmsgbrt/my-react-component-library)
+### 🏠 [Homepage](https://github.com/hamidrezakks/kk-modality)
 
 ## Install
 
