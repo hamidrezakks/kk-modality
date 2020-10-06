@@ -41,5 +41,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2019 [Hamidreza KK](https://github.com/hamidrezakks).<br />
+Copyright © 2020 [Hamidreza KK](https://github.com/hamidrezakks).<br />
 This project is [MIT](https://github.com/hamidrezakks/kk-modality/blob/master/LICENSE) licensed.
