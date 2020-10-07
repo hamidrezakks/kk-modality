@@ -1,4 +1,4 @@
-<h1 align="center">My React Component Library 👋</h1>
+<h1 align="center">KK Modality 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/hamidrezakks/kk-modality#readme" target="_blank">
@@ -19,13 +19,24 @@
 ## Install
 
 ```sh
-npm run install-all
+yarn add kk-modilty
 ```
 
 ## Usage
 
 ```sh
-npm run dev
+impot {Modality} from "kk-modality";
+
+const App = () => {
+    return (
+        <div className="App">
+            <Modality hideDrawerAnchor={false} dialogTransitionDuration={200} queueSize={5}/>
+            // rest of codes
+        </div>
+    );
+}
+
+export default App;
 ```
 
 ## Author

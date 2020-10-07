@@ -5,6 +5,7 @@ import pkg from './package.json';
 export default [
   {
     input: 'src/index.ts',
+    name: pkg.name,
     output: [
       {
         file: 'playground/src/lib/index.js',
@@ -13,6 +14,7 @@ export default [
       },
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'esm' },
+      { file: pkg.browser, format: 'umd', name: pkg.name },
     ],
     plugins: [
       del({ targets: ['dist/*', 'playground/src/lib'] }),
