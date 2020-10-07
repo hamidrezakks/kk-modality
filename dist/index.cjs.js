@@ -4,56 +4,12 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
+var tslib = require('tslib');
 var React = _interopDefault(require('react'));
 var core = require('@material-ui/core');
 var lodash = require('lodash');
 var styles$1 = require('@material-ui/core/styles');
 var styled = _interopDefault(require('styled-components'));
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-/* global Reflect, Promise */
-
-var extendStatics = function(d, b) {
-    extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return extendStatics(d, b);
-};
-
-function __extends(d, b) {
-    extendStatics(d, b);
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-
-function __makeTemplateObject(cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-}
 
 var ModalityService = /** @class */ (function () {
     function ModalityService() {
@@ -111,9 +67,9 @@ var styles = {
         borderRadius: '12px 12px 0 0',
     },
 };
-var DrawerAnchor = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    position: relative;  \n    height: 16px;\n    \n    &:after {\n        content: '';\n        height: 4px;\n        width 36px;\n        background-color: #ccc;\n        border-radius: 4px;\n        position: absolute;\n        top: 60%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n    }\n"], ["\n    position: relative;  \n    height: 16px;\n    \n    &:after {\n        content: '';\n        height: 4px;\n        width 36px;\n        background-color: #ccc;\n        border-radius: 4px;\n        position: absolute;\n        top: 60%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n    }\n"])));
+var DrawerAnchor = styled.div(templateObject_1 || (templateObject_1 = tslib.__makeTemplateObject(["\n    position: relative;  \n    height: 16px;\n    \n    &:after {\n        content: '';\n        height: 4px;\n        width 36px;\n        background-color: #ccc;\n        border-radius: 4px;\n        position: absolute;\n        top: 60%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n    }\n"], ["\n    position: relative;  \n    height: 16px;\n    \n    &:after {\n        content: '';\n        height: 4px;\n        width 36px;\n        background-color: #ccc;\n        border-radius: 4px;\n        position: absolute;\n        top: 60%;\n        left: 50%;\n        transform: translate(-50%, -50%);\n    }\n"])));
 var Modality = /** @class */ (function (_super) {
-    __extends(Modality, _super);
+    tslib.__extends(Modality, _super);
     function Modality(props) {
         var _this = _super.call(this, props) || this;
         _this.newConfirmDialogHandler = function (modal) {
@@ -223,14 +179,14 @@ var Modality = /** @class */ (function (_super) {
         var modalList = this.state.modalList;
         if (fullScreen) {
             return modalList.map(function (modal) {
-                return (React.createElement(core.SwipeableDrawer, { key: modal.id, anchor: "bottom", open: modal.open || false, onClose: _this.actionHandler(modal.id, 'cancel'), onOpen: _this.drawerOpenHandler, transitionDuration: _this.props.dialogTransitionDuration || 200, className: "kk-modality-bottom-drawer", classes: __assign({ paper: _this.props.classes.drawerPaper }, _this.props.drawerClasses) },
+                return (React.createElement(core.SwipeableDrawer, { key: modal.id, anchor: "bottom", open: modal.open || false, onClose: _this.actionHandler(modal.id, 'cancel'), onOpen: _this.drawerOpenHandler, transitionDuration: _this.props.dialogTransitionDuration || 200, className: "kk-modality-bottom-drawer", classes: tslib.__assign({ paper: _this.props.classes.drawerPaper }, _this.props.drawerClasses) },
                     Boolean(hideDrawerAnchor !== true) && React.createElement(DrawerAnchor, null),
                     _this.getContact(modal)));
             });
         }
         else {
             return modalList.map(function (modal) {
-                return (React.createElement(core.Dialog, __assign({ key: modal.id, transitionDuration: _this.props.dialogTransitionDuration || 200, open: modal.open || false, onClose: _this.actionHandler(modal.id, 'cancel'), classes: _this.props.dialogClasses }, modal.dialogProps), _this.getContact(modal)));
+                return (React.createElement(core.Dialog, tslib.__assign({ key: modal.id, transitionDuration: _this.props.dialogTransitionDuration || 200, open: modal.open || false, onClose: _this.actionHandler(modal.id, 'cancel'), classes: _this.props.dialogClasses }, modal.dialogProps), _this.getContact(modal)));
             });
         }
     };
@@ -241,9 +197,9 @@ var Modality = /** @class */ (function (_super) {
                 React.createElement(core.DialogContentText, null, modal.description))),
             React.createElement(core.DialogActions, null,
                 Boolean(modal.cancelText) &&
-                    React.createElement(core.Button, __assign({ color: "secondary" }, modal.cancelProps, { onClick: this.actionHandler(modal.id, 'cancel') }), modal.cancelText),
+                    React.createElement(core.Button, tslib.__assign({ color: "secondary" }, modal.cancelProps, { onClick: this.actionHandler(modal.id, 'cancel') }), modal.cancelText),
                 Boolean(modal.confirmText) &&
-                    React.createElement(core.Button, __assign({ color: "primary" }, modal.confirmProps, { onClick: this.actionHandler(modal.id, 'confirm') }), modal.confirmText),
+                    React.createElement(core.Button, tslib.__assign({ color: "primary" }, modal.confirmProps, { onClick: this.actionHandler(modal.id, 'confirm') }), modal.confirmText),
                 this.getButtonsContent(modal)));
     };
     Modality.prototype.getButtonsContent = function (modal) {
@@ -252,7 +208,7 @@ var Modality = /** @class */ (function (_super) {
             return null;
         }
         return modal.buttons.map(function (button, key) {
-            return (React.createElement(core.Button, __assign({ key: key }, button.props, { onClick: _this.actionHandler(modal.id, button.action) }), button.text));
+            return (React.createElement(core.Button, tslib.__assign({ key: key }, button.props, { onClick: _this.actionHandler(modal.id, button.action) }), button.text));
         });
     };
     return Modality;
@@ -262,3 +218,4 @@ var templateObject_1;
 
 exports.Modality = index;
 exports.ModalityService = ModalityService;
+//# sourceMappingURL=index.cjs.js.map
