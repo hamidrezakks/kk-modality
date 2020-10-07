@@ -99,7 +99,7 @@ class Modality extends React.Component<IProps, IState> {
                         paper: this.props.classes.drawerPaper, ...this.props.drawerClasses,
                     }}
                 >
-                    {Boolean(hideDrawerAnchor !== true) && <DrawerAnchor/>}
+                    {Boolean(hideDrawerAnchor !== true) && <DrawerAnchor className="kk-modality-drawer-anchor"/>}
                     {this.getContact(modal)}
                 </SwipeableDrawer>);
             });
