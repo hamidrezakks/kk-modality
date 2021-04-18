@@ -67,7 +67,7 @@ export default class ModalityService {
     }
 
     public open(options: IModalOptions, cb?: (action: 'confirm' | 'cancel' | string) => void): Promise<'confirm' | 'cancel' | string> {
-        const data = merge(clone(this.defaultOptions), clone(options));
+        const data = clone(merge(clone(this.defaultOptions), clone(options)));
         this.uniqueId++;
         const id = this.uniqueId;
         (data as IModal).id = id;
